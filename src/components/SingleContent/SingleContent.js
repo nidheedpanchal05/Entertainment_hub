@@ -23,10 +23,12 @@ const SingleContent = ({
         alt={title}
       />
       <b className="title">{title}</b>
+      <b>
       <span className="subTitle">
         {media_type === "tv" ? "TV Series" : "Movie"}
         <span className="subTitle">{date}</span>
       </span>
+      </b>
     </div>
   );
 };

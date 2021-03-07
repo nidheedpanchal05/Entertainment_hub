@@ -21,7 +21,7 @@ const Movies = () => {
 
     useEffect(() => {
         fetchMovies();
-    }, [page])
+    }, [page, genreforURL])
     return (
         <div>
       <span className="pageTitle">Discover Movies</span>
