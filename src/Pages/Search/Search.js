@@ -10,7 +10,7 @@ import {
   import SearchIcon from "@material-ui/icons/Search";
   import { useEffect, useState } from "react";
   import axios from "axios";
-  //import CustomPagination from "../../components/Pagination/CustomPagination";
+  import CustomPagination from "../../components/Pagination/CustomPagination";
   import SingleContent from "../../components/SingleContent/SingleContent";
   
   const Search = () => {
@@ -101,7 +101,9 @@ import {
             !content &&
             (type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)}
         </div>
-
+        {numOfPages > 1 && (
+        <CustomPagination setPage={setPage} numOfPages={numOfPages} />
+      )}
       </div>
     );
   };
